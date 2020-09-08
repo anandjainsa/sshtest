@@ -7,7 +7,7 @@ pipeline {
                 sshagent ( ['a-jenkins-credential']) {
     sh '''
 ssh -vv anandjain@localhost echo testing connection || true
-ssh-add -L
+scp -rv /tmp/myfile.txt anandjain@localhost:~/
 echo done running remote windows test
 '''
   }

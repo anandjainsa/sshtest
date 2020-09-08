@@ -6,7 +6,7 @@ pipeline {
             steps {
                 sshagent ( ['a-jenkins-credential']) {
     sh '''
-ssh -vv myuser@myserver echo testing connection || true
+ssh -vv anandjain@localhost echo testing connection || true
 ssh-add -L
 echo done running remote windows test
 '''

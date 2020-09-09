@@ -7,7 +7,7 @@ pipeline {
         stage("Build"){
             steps {
                 script {
-                    currentBuild.displayName = "${ENV}-${env.BRANCH_NAME}-${currentBuild.id}"
+                    currentBuild.displayName = "${ENV}-${BRANCH_NAME}-${currentBuild.id}"
                     currentBuild.description = "The best description."
                 }
             }

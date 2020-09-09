@@ -1,12 +1,12 @@
 pipeline {
     agent none
+       environment {
+       BUILD_DISPLAY_NAME = 'anand'
+            }
     stages {
             stage('test') {
             steps {
-             script {
-                build.displayName = 'This build needs help!!!'
-                buildDescription "Executed @ jain"
-                 }
+                sh ''' echo "hello" '''
             }
         }
     }

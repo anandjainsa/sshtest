@@ -1,10 +1,9 @@
 pipeline {
-    agent none
        environment {
        BUILD_DISPLAY_NAME = 'anand'
             }
     stages {
-            stage('test') {
+       tage('test') {
             steps {
                 sh ''' echo "hello" '''
             }

@@ -2,6 +2,7 @@ pipeline {
    agent none
    environment {
        color = 'blue'
+      BUILD_DISPLAY_NAME='Anand Jain'
    }
    stages {
        stage('example') {

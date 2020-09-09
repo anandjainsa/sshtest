@@ -7,7 +7,7 @@ pipeline {
         stage("Build"){
             steps {
                 script {
-                    currentBuild.displayName = "${ENV}-${BRANCH_NAME}-${currentBuild.id}"
+                    currentBuild.displayName = "${GIT_BRANCH.split("/")[1]}-${currentBuild.id}"
                     currentBuild.description = "The best description."
                 }
             }

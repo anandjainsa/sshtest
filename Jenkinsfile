@@ -1,16 +1,12 @@
 pipeline {
-   agent none
-   environment {
-       color = 'blue'
-      BUILD_DISPLAY_NAME='Anand Jain'
-   }
-   stages {
-       stage('example') {
-            agent { label 'master' }
+    agent any
+    stages {
+        stage("Build"){
             steps {
-               script {
-                  env.BUILD_DISPLAY_NAME='Anand'
-               }
+                script {
+                    currentBuild.displayName = "The name."
+                    currentBuild.description = "The best description."
+                }
             }
         }
     }

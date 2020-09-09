@@ -1,11 +1,20 @@
 pipeline {
-       environment {
-       BUILD_DISPLAY_NAME = 'anand'
-            }
-    stages {
-       tage('test') {
+   agent none
+   environment {
+       color = 'blue'
+   }
+   stages {
+       stage('example') {
+            agent { label 'master' }
             steps {
-                sh ''' echo "hello" '''
+               script {
+                   def fields = env.getEnvironment()
+                   fields.each {
+                        key, value -> println("${key} = ${value}");
+                    }
+ 
+                    println(env.PATH)
+               }
             }
         }
     }

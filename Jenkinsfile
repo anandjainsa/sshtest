@@ -9,12 +9,7 @@ pipeline {
             agent { label 'master' }
             steps {
                script {
-                   def fields = env.getEnvironment()
-                   fields.each {
-                        key, value -> println("${key} = ${value}");
-                    }
- 
-                    println(env.PATH)
+                  env.BUILD_DISPLAY_NAME='Anand'
                }
             }
         }

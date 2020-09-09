@@ -3,7 +3,7 @@ pipeline {
     stages {
             stage('test') {
             steps {
-                uildName "anand"
+                currentBuild.displayName = 'This build needs help!!!'
                 buildDescription "Executed @ jain"
                  }
             }

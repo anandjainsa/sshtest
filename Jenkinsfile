@@ -7,7 +7,7 @@ pipeline {
         stage("Build"){
             steps {
                 script {
-                    currentBuild.displayName = "env.APP_WAR_NAME"
+                    currentBuild.displayName = "${APP_WAR_NAME}"
                     currentBuild.description = "The best description."
                 }
             }

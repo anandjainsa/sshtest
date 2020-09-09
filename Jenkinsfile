@@ -4,9 +4,10 @@ pipeline {
             stage('test') {
             agent any
             steps {
-                sshagent (['a-jenkins-credential']) {
+                uildName "anand"
+                buildDescription "Executed @ jain"
+
     sh '''
-        scp -rv /tmp/myfile.txt anandjain@localhost:~/
 echo done running remote windows test
 '''
   }

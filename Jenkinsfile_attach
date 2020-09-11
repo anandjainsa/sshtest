@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Download') {
             steps {
-                sh 'mkdir target'
+                sh 'rm -rf target; mkdir target'
                 sh 'echo "artifact file" > target/generatedFile.txt'
             }
         }
